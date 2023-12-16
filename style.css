@@ -8,8 +8,11 @@
 
 /********** Text **********/
 
-html {
+:root {
   font-size: 16px;
+}
+
+body {
   font-family: 'IBM Plex Sans', sans-serif;
   color: #191826;
 }
@@ -46,10 +49,19 @@ p {
 }
 
 
+/********** Background **********/
+
+body {
+  background-image: url('./assets/bg-main-mobile.png');
+  background-repeat: no-repeat;
+  background-position: top -250px right -230px;
+}
+
+
 /********** Layout **********/
 
-.container {
-  margin: 2.5rem 1.5rem;
+.wrapper {
+  max-width: 375px;
   position: relative;
 }
 
