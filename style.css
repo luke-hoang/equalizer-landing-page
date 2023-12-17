@@ -25,27 +25,9 @@ h1 {
   margin-bottom: 1.25rem;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #FFFFFF;
-}
-
 p {
   font-size: 1rem;
   line-height: 1.7rem;
-}
-
-.subscription p {
-  font-size: 1.125rem;
-  color: #FFFFFF;
-}
-
-.amount {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-right: 1rem;
-  vertical-align: middle;
 }
 
 
@@ -58,56 +40,109 @@ body {
 }
 
 
-/********** Layout **********/
+/* layout */
 
 .wrapper {
-  max-width: 375px;
+  min-width: 375px;
   position: relative;
 }
 
-.description, footer {
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(32, 32px);
+}
+
+header, footer {
   margin: 3rem 1.5rem;
 }
 
-.illustration {
-  width: 205px;
-  max-width: 270px;
+
+/* background */
+
+.background {
+  background-color: #191826;
+  grid-column: 1 / span 4;
+  grid-row: 4 / span 16;
+  z-index: 1;
+}
+
+.background__image {
   display: block;
+  width: 80%;
   margin: 0 auto;
 }
 
-.subscription {
-  padding: 3rem 2.25rem;
-  background-color: #FA7453;
-  border-radius: 12px;
+/* illustration */
+
+.illustration {
+  display: block;
+  grid-column: 2 / 4;
+  z-index: 2;
 }
 
-.subscription img {
-  margin-right: 0.5rem;
+.illustration__image {
+  max-width: 100%;
+}
+
+
+/* card */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2.25rem;
+  background-color: #FA7453;
+  border-radius: 12px;
+  grid-column: 1 / span 4;
+  grid-row: 17 / span 16;
+  z-index: 3;
+}
+
+.card__heading {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #FFFFFF;
+}
+
+.card__paragraph {
+  font-size: 1.125rem;
+  color: #FFFFFF;
+}
+
+.card__paragraph > b {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-right: 1rem;
   vertical-align: middle;
 }
 
-.pricing {
-  margin: 2.7rem 0;
-}
-
-/********** Buttons **********/
-
-button {
-  font-size: 1.125rem;
-  font-weight: bold;
+.card__button {
+  display: block;
   width: 100%;
   padding: 1rem;
-  margin-top: 1rem;
   border-radius: 12px;
   border: none;
+  font-size: 1.125rem;
+  font-weight: bold;
 }
 
-button.dark {
+.card__button:nth-child(2) {
+  margin-top: 1rem;
+}
+
+.card__button--dark {
   background-color: #191826;
   color: #FFFFFF;
 }
 
-button.light {
+.card__button--light {
   background-color: #FCFAF9;
+  
+}
+
+.card__button > img {
+  margin-right: 0.5rem;
+  vertical-align: middle;
 }

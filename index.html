@@ -5,43 +5,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./style.css"/>
   <title>Frontend Mentor | Equalizer landing page</title>
 </head>
 
 <body>
   <div class="wrapper">
 
-    <div class="description">
-      <img src="./assets/logo.svg" alt="">
+    <header>
+      <img src="./assets/logo.svg" alt=""/>
       <h1>We make your music sound extraordinary.</h1>
-      <p>A system audio equalizer specifically designed for Android and iOS. Freely tune the way your music sounds with a
-        professional grade parametric EQ & volume mixer. Control bass, mids, treble, gain control, reverb, and more!</p>
-    </div>
+      <p>
+        A system audio equalizer specifically designed for Android and iOS. Freely tune the way your music sounds with
+        a professional grade parametric EQ & volume mixer. Control bass, mids, treble, gain control, reverb, and more!
+      </p>
+    </header>
 
-    <img class="illustration" src="./assets/illustration-app.png" alt="illustration of the equalizer app"/>
-
-    <div class="subscription">
-      <h2>Premium EQ</h2>
-      <p>Get expert-level control with a robust equalizer, volume mixer, and spatial audio. Take your listening experience
-        to a whole new level and access all our incredible features!</p>
-      <p class="pricing""><span class="amount">$4</span> / month</p>
-      <button class="dark"><img src="./assets/icon-apple.svg"/>iOS Download</button>
-      <button class="light"><img src="./assets/icon-android.svg"/>Android Download</button>
-    </div>
+    <main class="grid">
+      <div class="illustration">
+        <img class="illustration__image" src="./assets/illustration-app.png"/>
+      </div>
+      <div class="background">
+        <img class="background__image" src="./assets/bg-pattern-2.svg"/>
+      </div>
+      <div class="card">
+        <div>
+          <h2 class="card__heading">Premium EQ</h2>
+          <p class="card__paragraph">
+            Get expert-level control with a robust equalizer, volume mixer, and spatial audio.
+            Take your listening experience to a whole new level and access all our incredible features!
+          </p>
+        </div>
+        <div>
+          <p class="card__paragraph""><b>$4</b> / month</p>
+        </div>
+        <div>
+          <button class="card__button card__button--dark"><img src="./assets/icon-apple.svg" />iOS Download</button>
+          <button class="card__button card__button--light"><img src="./assets/icon-android.svg" />Android Download</button>
+        </div>
+      </div>
+    </main>
 
     <footer>
       <div class="contact">
         <img src="./assets/logo.svg" alt="">
-        <p>All rights reserved © Equalizer 2021 Have any problems? Contact us via social media or email us at
-          equalizer@example.com</p>
+        <p>
+          All rights reserved © Equalizer 2021 Have any problems? Contact us via social media or email us at
+          equalizer@example.com
+        </p>
       </div>
-      <div class="social-media">
-        <a href="www.facebook.com" target="_blank"><img src="./assets/icon-facebook.svg"/></a>
-        <a href="www.instagram.com" target="_blank"><img src="./assets/icon-instagram.svg"/></a>
-        <a href="www.twiiter.com" target="_blank"><img src="./assets/icon-twitter.svg"/></a>
+      <div class="links">
+        <a href="www.facebook.com" target="_blank"><img src="./assets/icon-facebook.svg" /></a>
+        <a href="www.instagram.com" target="_blank"><img src="./assets/icon-instagram.svg" /></a>
+        <a href="www.twiiter.com" target="_blank"><img src="./assets/icon-twitter.svg" /></a>
       </div>
     </footer>
+
   </div>
 </body>
 
