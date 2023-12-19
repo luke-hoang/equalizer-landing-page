@@ -51,47 +51,10 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(8, 128px);
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: repeat(16, 64px);
+  justify-items: center;
 }
-
-@media (min-width: 740px) {
-  html {
-    font-size: 18px;
-  }
-
-  main {
-    position: relative;
-    display: block;
-    border: 1px dashed red;
-    min-height: 834px;
-    margin: 0 1.5rem;
-  }
-
-  .background {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    margin: auto;
-    min-height: 600px;
-  }
-
-  .illustration {
-    position: absolute;
-    max-width: 270px;
-    left: 10%;
-  }
-
-  .card {
-    position: absolute;
-    max-width: 400px;
-    min-height: 512px;
-    right: 10%;
-    bottom: 0;
-  }
-}
-
 
 header, footer {
   margin: 3rem 1.5rem;
@@ -105,8 +68,8 @@ header, footer {
   overflow: hidden;
   background-color: #191826;
   border-radius: 12px;
-  grid-column: 1 / span 4;
-  grid-row: 2 / span 4;
+  grid-column: 1 / -1;
+  grid-row: 3 / span 9;
   z-index: 1;
 }
 
@@ -120,13 +83,14 @@ header, footer {
 
 .illustration {
   display: block;
-  grid-column: 2 / 4;
-  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  grid-row: 1 / span 1;
   z-index: 2;
 }
 
 .illustration__image {
-  max-width: 100%;
+  width: 100%;
+  max-width: 210px;
 }
 
 
@@ -140,9 +104,10 @@ header, footer {
   padding: 2.25rem;
   background-color: #FA7453;
   border-radius: 12px;
-  grid-column: 1 / span 4;
-  grid-row: 5 / span 4;
+  grid-column: 1 / -1;
+  grid-row: 9 / span 8;
   z-index: 3;
+  max-width: 400px;
 }
 
 .card__heading {
@@ -190,4 +155,44 @@ header, footer {
 .card__button > img {
   margin-right: 0.5rem;
   vertical-align: middle;
+}
+
+
+@media (min-width: 750px) {
+  html {
+    font-size: 18px;
+  }
+
+  main {
+    position: relative;
+    display: block;
+    min-height: 834px;
+    margin: 0 1.5rem;
+  }
+
+  .background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    margin: auto;
+    min-height: 600px;
+  }
+
+  .illustration {
+    position: absolute;
+    left: 10%;
+  }
+
+  .illustration__image {
+    max-width: 280px;
+  }
+
+  .card {
+    position: absolute;
+    min-height: 546px;
+    max-width: 400px;
+    right: 10%;
+    bottom: 0;
+  }
 }
