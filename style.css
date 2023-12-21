@@ -92,16 +92,23 @@ main {
 
 .card {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 100%;
   padding: 36px;
   background-color: #FA7453;
   border-radius: 12px;
   grid-column: 1 / -1;
   grid-row: 9 / span 8;
   z-index: 3;
-  max-width: 400px;
+}
+
+.card__content {
+  max-width: 368px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+
 }
 
 .card__heading {
@@ -143,7 +150,6 @@ main {
 
 .card__button--light {
   background-color: #FCFAF9;
-  
 }
 
 .card__button > img {
@@ -178,10 +184,10 @@ footer > div {
   column-gap: 20px;
 }
 
-
-@media (min-width: 580px) {
+@media (min-width: 680px) {
   .wrapper {
     padding: 60px 40px;
+    max-width: 100%;
   }
 
   main {
@@ -197,6 +203,7 @@ footer > div {
     translate: -50% -50%;
     margin: auto;
     min-height: 600px;
+    max-width: 100%;
   }
 
   .illustration {
@@ -206,7 +213,7 @@ footer > div {
 
   .card {
     position: absolute;
-    min-height: 546px;
+    height: 546px;
     max-width: 400px;
     right: 10%;
     bottom: 0;
